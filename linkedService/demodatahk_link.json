@@ -1,0 +1,18 @@
+{
+	"name": "demodatahk_link",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "cicd_kv_link",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "demodatahk-key",
+				"secretVersion": "31ee17d476f54aa49a9dceca1b1bc997"
+			}
+		}
+	}
+}
