@@ -1,0 +1,24 @@
+{
+	"name": "new_receipt_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/raw/blobs/receipt/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/1879aa43-d608-46e4-a785-0d32acda95a4/resourceGroups/form-recognizer-rg/providers/Microsoft.Storage/storageAccounts/demodatahk",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
