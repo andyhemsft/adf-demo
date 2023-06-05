@@ -41,7 +41,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Receipt",
+						"referenceName": "Receipt_Copy",
 						"type": "DatasetReference"
 					}
 				]
