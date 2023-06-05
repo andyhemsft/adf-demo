@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactory-demo-dev"
+		},
+		"cicd_kv_link_properties_typeProperties_baseUrl": {
+			"value": "https://cicd-demo-kv.vault.azure.net/"
+		},
+		"demodatahk_link_properties_typeProperties_connectionString_secretName": {
+			"value": "demodatahk-key"
+		},
+		"new_receipt_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/1879aa43-d608-46e4-a785-0d32acda95a4/resourceGroups/form-recognizer-rg/providers/Microsoft.Storage/storageAccounts/demodatahk"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
