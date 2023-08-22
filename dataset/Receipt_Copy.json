@@ -1,0 +1,18 @@
+{
+	"name": "Receipt_Copy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sademohkdev_link",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "receipt_copy",
+				"container": "raw"
+			}
+		}
+	}
+}
