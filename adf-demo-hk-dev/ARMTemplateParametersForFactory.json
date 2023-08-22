@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-demo-hk-dev"
+		},
+		"kv_demo_hk_dev_link_properties_typeProperties_baseUrl": {
+			"value": "https://kv-demo-hk-dev.vault.azure.net/"
+		},
+		"sademohkdev_link_properties_typeProperties_connectionString_secretName": {
+			"value": "sademohkdev-key"
+		},
+		"receipt_upload_properties_typeProperties_scope": {
+			"value": "/subscriptions/26fc256d-8987-42cd-850d-23c2ee201220/resourceGroups/sa-demo-rg/providers/Microsoft.Storage/storageAccounts/sademohkdev"
+		}
+	}
+}

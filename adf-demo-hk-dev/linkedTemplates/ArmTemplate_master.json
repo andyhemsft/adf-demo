@@ -1,0 +1,63 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-demo-hk-dev"
+		},
+		"kv_demo_hk_dev_link_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv-demo-hk-dev.vault.azure.net/"
+		},
+		"sademohkdev_link_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "sademohkdev-key"
+		},
+		"receipt_upload_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/26fc256d-8987-42cd-850d-23c2ee201220/resourceGroups/sa-demo-rg/providers/Microsoft.Storage/storageAccounts/sademohkdev"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-demo-hk-dev_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"kv_demo_hk_dev_link_properties_typeProperties_baseUrl": {
+						"value": "[parameters('kv_demo_hk_dev_link_properties_typeProperties_baseUrl')]"
+					},
+					"receipt_upload_properties_typeProperties_scope": {
+						"value": "[parameters('receipt_upload_properties_typeProperties_scope')]"
+					},
+					"sademohkdev_link_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('sademohkdev_link_properties_typeProperties_connectionString_secretName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
