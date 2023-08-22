@@ -1,0 +1,17 @@
+{
+	"name": "receipt_upload",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/raw/blobs/receipt/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/26fc256d-8987-42cd-850d-23c2ee201220/resourceGroups/sa-demo-rg/providers/Microsoft.Storage/storageAccounts/sademohkdev",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
