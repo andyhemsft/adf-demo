@@ -1,0 +1,10 @@
+{
+	"name": "kv_demo_hk_dev_link",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-demo-hk-dev.vault.azure.net/"
+		}
+	}
+}
