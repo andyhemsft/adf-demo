@@ -1,0 +1,17 @@
+{
+	"name": "sademohkdev_link",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "kv_demo_hk_dev_link",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sademohkdev-key"
+			}
+		}
+	}
+}
